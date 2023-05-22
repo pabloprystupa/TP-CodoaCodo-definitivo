@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="css/estilosformulario.css">
+</head>
+<body>
+	<main>
+        <header>
+            <img src="img/logo1.png" class="logo">
+                <h2 class="logo">Verte libre</h2>
+            <a/>
+            <nav>
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="construc.html" class="nav-link">Mapa del festival</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+        </header>
+        <form>
+            <div>
+                <h1>Entradas</h1>
+                <h3>Añade un producto</h3>
+            </div>
+            <p></p>
+            <div>
+                <label for="categoria">Categoría</label>
+                <select name="categoria" id="">
+                    <option value="">Seleccione categoría</option>
+                    <option value="entradaGeneral">Entrada general ($25.000)</option>
+                    <option value="entradaGeneral">Entrada general + estacionamiento ($35.000)</option>
+                </select>
+            </div>
+            <p></p>
+            <div>
+                <label for="fecha">Fecha</label>
+                <select name="fecha" id="">
+                    <option value="">Seleccione fecha</option>
+                    <option value="unicaFecha">20/11 FECHA ÚNICA</option>
+                </select>
+            </div>
+            <p></p>
+            <div>
+                <label for="cantidad">Cantidad de entradas</label>
+                <select name="cantidad" id="">
+                    <option value="">Seleccione cantidad</option>
+                    <option value="cantidad1">1</option>
+                    <option value="cantidad1">2</option>
+                    <option value="cantidad1">3</option>
+                    <option value="cantidad1">4</option>
+                    <option value="cantidad1">5</option>
+                    <option value="cantidad1">6</option>
+                </select>            
+            </div>
+            <div class="container"></div>
+            <div>
+                <a type="button" value="Completar compra" name="" id="finish" class="button">
+            </div>
+
+		<h2>Datos para la compra</h2>
+		<form class="formulario" id="formulario">
+			<!--Grupo: Num de tarjeta-->
+			<div class="formulario__grupo" id="grupo__tarjeta">
+				<label for="tarjeta" class="formulario__label">Número de tarjeta de débito/crédito</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="tarjeta" id="tarjeta" min="1" max="12">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+			</div>
+
+			<!--Grupo: titular de la tarjeta-->
+			<div class="formulario__grupo" id="grupo__titular">
+				<label for="titular" class="formulario__label">Titular de la tarjeta</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="titular" id="titular">
+						<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+					</div>
+			</div>
+			
+
+			<!--Grupo: Cuotas-->
+			<div class="formulario__grupo" id="grupo__cuotas">
+				<label for="cuotas" class="formulario__label">Número de cuotas</label>
+				<div class="formulario__grupo-input">
+                    <select name="cuotas" id="">
+                        <option value="">Seleccionar cuotas</option>
+                        <option value="cuotas">1 cuota de $25.000</option>
+                        <option value="cuotas">3 cuotas de $10000 (tasa de recargo de 20%)</option>
+                        <option value="cuotas">6 cuotas de $5500 (tasa de recargo de 32%)</option>
+                    </select>
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+			</div>
+
+			<!--Grupo: Fecha de vencimiento-->
+			<div class="formulario__grupo" id="grupo__fechaVecimiento">
+				<label for="fechaVencimiento" class="formulario__label">Fecha de vencimiento (mm/aa)</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="fechaVencimiento" id="fechaVencimiento">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+			</div>
+
+			<!--Grupo: Codigo de seguridad-->
+			<div class="formulario__grupo" id="grupo__codigoSeguridad">
+				<label for="codigoSeguridad" class="formulario__label">Código de seguridad de la tarjeta</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="codigoSeguridad" id="codigoSeguridad">
+					<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+				</div>
+			</div>
+
+			<!--Grupo: Teléfono-->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono de contacto</label>
+					<div class="formulario__grupo-input">
+						<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="01145678912">
+						<i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+					</div>
+					<p class="formulario__input-error">El teléfono sólo puede contener números y el máximo son 14 dígitos</p>
+			</div>
+			
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fa-sharp fa-solid fa-triangle-exclamation" style="color: #d60505;"></i> <b>Error:</b> Por favor, rellene el formulario correctamente </p>
+			</div>
+            <p></p>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Comprar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡La compra se realizó exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="../PagFestival-main/datos compra.js"></script>
+	<script src="https://kit.fontawesome.com/91c69ac2ac.js" crossorigin="anonymous"></script>
+	<script>
+		const $form = document.querySelector('#form')
+		$form.addEventListener('submit', handleSubmit)
+		async function handleSubmit(event){
+			event.preventDefault()
+			const form = new FormData(this)
+			const response = await fetch(this.action, {
+				method:this.method,
+				body: form,
+				headers:{
+					'Accept': 'application/json'
+				}
+			})
+			if (response.ok){
+				this.reset()
+				alert('¡Compra realizada correctamente!')
+			}
+		}
+	</script>
+</body>
+</html>

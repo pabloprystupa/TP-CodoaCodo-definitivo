@@ -1,0 +1,228 @@
+/* Globales */
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    background-color: #be7fc3;
+}
+
+header{
+    background: rgba(216, 186, 217, 0.9);
+    width: 100%;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
+    padding: 20px 0 40px 0;
+}
+
+header .logo{
+    float: left;
+    height: 70px;
+    margin: 5px;
+}
+header h1{
+    color: rgb(9, 0, 0);
+    padding: 25px 0;
+    text-align: left;
+
+}
+/*Formato de menu superior */
+nav{
+    display: flex;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: #67ccd9;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 75%;
+    margin-bottom: 20px;
+}
+nav >a{
+    color: #f1d5ed;
+    font-weight: 300;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #000; 
+    margin-right:20px;    
+}
+nav >a:hover{
+    transform: scale(1.1); 
+    filter: blur(0.5px);
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.icon-car{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+.icon-cart:hover{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+.container-icon{
+    position: relative;
+}
+.count-products{
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    background-color: #832096;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#contador-productos{
+    font-size: 22px;
+}
+
+.container-cart-products{
+    position: flex;
+    top: 450%;
+    right: 5px;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.cantidad-producto-carrito{
+    font-weight: 400px;
+    font-size: 20px;
+}
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 200px 0 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+.item figure{
+    overflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.price{
+    font-size: 20px;
+    font-weight: 900px;
+}
+
+.info-product button{
+    display: inline-block;
+    background-color: rgb(77, 32, 94);
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 10px;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 5%;
+    box-shadow: 0 2px 2px 1px #611985;
+}
+
+/* Formato footer */ 
+.footer{
+    width: 100%;
+    background-color: #fc00ff;
+    clear: both;
+    text-align: center;
+    color : white;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+.footer :hover{
+    background-color: #591360;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 800px){
+    .Contenedor{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+}
+    
+
+

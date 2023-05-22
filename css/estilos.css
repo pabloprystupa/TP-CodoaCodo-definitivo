@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+body{
+    background-color: #906bdf;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
+
+}
+.Contenedor{
+    width: 200%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: center;
+}
+
+/*Formato titulos */
+header{
+    width: 100%;
+    height: 600px;
+    background: #fc00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc00ff, #00dbde); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(299, 100%, 50%, 0.354), hsla(202, 100%, 44%, 0.354)), url(../img/fondo.avif); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+}
+header .logo{
+    float: left;
+    height: 100px;
+    margin: 10px;
+}
+header h1{
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+header .texto-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.texto-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+.texto-header h2{
+    font-size: 30px;
+    color: #fff;
+}
+
+/*Formato de menu superior */
+nav{
+    display: flex;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: #67ccd9;
+    padding: 30px 30px 0 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 75%;
+    margin-bottom: 20px;
+}
+nav >a{
+    color: #e2b5db;
+    font-weight: 300;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px #000; 
+    margin-right:20px;    
+}
+nav >a:hover{
+    transform: scale(1.1); 
+    filter: blur(0.5px);
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+      
+/*formato de carrousel */
+li {
+    list-style-type: none;
+  }
+  .carrousel {
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+  }  
+  .carrousel .grande {
+    width: 220%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+  .carrousel .img {
+    width: calc( 100% / 4 - 2em);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+  }
+  .carrousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    transition: all 0.3s ease;
+    border-radius: 1em;
+    background-color: rgb(16, 16, 107);    
+  }
+  .carrousel .punto.activo {
+    background-color: rgb(123, 198, 224);
+    box-shadow: 0 3px 3px 2px #205d65;
+  }
+
+.Sonido{
+    display: flex;
+    position:left;
+}
+
+audio{
+    border:#591360 solid 5px;
+    border-radius: 50%; 
+    text-align: left;
+}
+
+/* Formato de accesos */   
+.vertical .nav-link{
+    display: flex;
+    color: #67ccd9;
+    border: 5px solid #001E2D;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    background-color: #001E2D;   
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: justify;
+    padding: 5px;
+   
+}
+.nav-link img{
+    height: 25px;
+    margin: 2px 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Al pasar el mouse sobre la LISTA */
+    ul:hover li a {
+        transform: scale(1);
+        opacity: 0.7;
+        filter: blur(0.5px); 
+    }
+    /* Al pasar el mouse sobre un LINK dentro de la lista */
+    ul li a:hover {
+        transform: scale(1.1); 
+        opacity: 1;
+        filter: blur(0px);
+    }
+    ul li a:hover img{
+        transform: scale(2.1);
+    }
+    /* Al ENTRAR con el mouse sobre el link dentro de la lista */
+    ul li a:before {
+        content: "";
+        position: absolute; 
+        top: 0px;
+        left: 0px;
+        width: 100%;        
+        height: 100%;      
+        transition: 0.4s;
+        transform-origin: right;
+        transform: scaleX(1.1); 
+        z-index: -1;      
+    } 
+
+/* Formato Columnas - cartas */
+    .Columnas{
+        width: 100%;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .carta{
+        display: grid;
+        padding: 5px;
+        background-color: aquamarine;
+        text-align: center;        
+    } 
+    .Columnas .carta .img{
+        display: flex;
+        justify-content: center;
+        border-right: 10px;
+        border-left: 10px;
+    }
+
+    .Columnas .carta .boton{
+            display: inline-block;
+            background-color: rgb(220, 64, 163);
+            padding: 5px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 5%;
+            box-shadow: 0 2px 2px 1px #611985;
+    }   
+        
+    .Columnas .img{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    } 
+
+    h4{
+        margin-top: 15px;
+        font-size: 16px;    
+        padding: 5px;
+    }
+
+    /* Formato pág Artistas */
+
+    .boton{
+        display: inline-block;
+        background-color: rgb(211, 74, 135);
+        padding: 2px;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        border-radius: 5%;
+        box-shadow: 0 2px 2px 1px #611985;
+    }
+    .contenedor1 h2{
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(132, 160, 217);        
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 3px #000;
+    }
+    .contenedor1 img{
+        border: 5px solid rgb(80, 166, 197); 
+    }
+
+/* Formato footer */ 
+    .footer{
+        width: 100%;
+        background-color: #fc00ff;
+        clear: both;
+        text-align: center;
+        color : white;
+        transition: 0.4s;
+    }
+    .footer :hover{
+        background-color: #591360;
+        transition: 0.4s;
+    }
+
+    @media screen and (max-width: 800px){
+        .Contenedor{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+        }
+    }
+
+
+

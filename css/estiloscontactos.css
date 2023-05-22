@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+  }
+  
+  body {
+    background: rgb(63,251,202);
+    background: radial-gradient(circle, rgba(63,251,202,1) 0%, rgba(226,70,252,1) 100%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 50px;
+    margin: 5% 20% 10% 20%;
+  }
+  .logo{
+    float: center;
+    height: 110px;
+    margin: 2px;
+}
+h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+  text-align: center;
+  color: rgb(245, 238, 238);
+  font-size: 23px;
+}
+
+  .form-contact {
+    background: #FFF;
+    width: 400px;
+    position: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 2px 1px #611985;
+  }
+    
+  header {
+    width: 100%;
+    background: #a4208a;
+    overflow: hidden;
+    color: white;
+  }
+  header .mensaje{
+    width: 80px;
+  }
+  header span {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .contact {
+    padding: .8rem;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .contact label, .contact input, .contact textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;   
+  }
+  
+  .contact label {
+    font-weight: 700;
+  }
+  
+  .contact input:not([type='submit']), .contact textarea {
+    border: none;
+    border-bottom: 2px solid #a4208a;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color: gray;
+  }
+  
+  .contact textarea {
+    min-height: 100px;
+  }
+  
+  input[type='submit'] {
+    padding: 10px;
+    background: #a4208a;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 800px){
+    .Contenedor{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+}
