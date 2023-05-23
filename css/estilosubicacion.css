@@ -17,12 +17,7 @@ header {
     padding: 10px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
+.imagen-colectivo img{
     height: 50px;
     margin-right: 10px;
 }
